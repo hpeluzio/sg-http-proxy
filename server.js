@@ -9,6 +9,8 @@ http
       domain = req.headers.host,
       host = domain.split(':')[0];
 
+    console.log('host: ', host);
+
     if (host === 'api.bolaodasorte.online')
       target = { host: 'localhost', port: '3333' };
     if (host === 'paymentmethods.bolaodasorte.online')
