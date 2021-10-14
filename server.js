@@ -11,13 +11,12 @@ http
 
     console.log('host: ', host);
 
-    if (host === 'api.bolaodasorte.online')
-      target = { host: 'localhost', port: '3333' };
+    if (host === 'api.bolaodasorte.online') target = 'http://localhost:3333';
     if (host === 'paymentmethods.bolaodasorte.online')
-      target = { host: 'localhost', port: '4444' };
+      target = 'http://localhost:4444';
     if (host === 'createcardtoken.bolaodasorte.online')
-      target = { host: 'localhost', port: '4445' };
-    else target = { host: 'localhost', port: '3000' };
+      target = 'http://localhost:4445';
+    else target = 'http://localhost:3000';
 
     proxy.web(req, res, {
       target: target,
