@@ -5,7 +5,7 @@ var httpProxy = require('http-proxy');
 var proxy = httpProxy.createProxyServer();
 http
   .createServer(function (req, res) {
-    var target,
+    var target = undefined,
       domain = req.headers.host,
       host = domain.split(':')[0];
 
@@ -22,8 +22,10 @@ http
     if (host === 'bolaodasorte.online')
       target = { host: 'localhost', port: '3000' };
 
-    proxy.web(req, res, {
-      target: target,
-    });
+    if (target !== undefined) {
+      proxy.web(req, res, {
+        target: target,
+      });
+    }
   })
   .listen(80);
