@@ -19,6 +19,8 @@ http
       target = { host: 'localhost', port: '4445' };
     if (host === 'mptoken.bolaodasorte.online')
       target = { host: 'localhost', port: '4446' };
+    if (host === 'mpcardtoken.bolaodasorte.online')
+      target = { host: 'localhost', port: '4447' };
     if (host === 'www.bolaodasorte.online')
       target = { host: 'localhost', port: '3000' };
     if (host === 'bolaodasorte.online')
